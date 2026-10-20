@@ -1,0 +1,499 @@
+
+
+/* Reset default spacing */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #eaf6fc;
+    color: #333;
+    padding: 30px 20px;
+}
+
+button {
+    padding: 12px 22px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background-color: #fbd5e5;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f5b9d1;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #5799bd;
+    outline-offset: 3px;
+}
+
+/* Header and navigation */
+.main-header {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #333;
+}
+
+.nav-btn {
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+}
+
+.nav-btn:hover {
+    background-color: #fce4ee;
+}
+
+.nav-btn.active {
+    background-color: #fbd5e5;
+    font-weight: 700;
+}
+
+/* Main content and pages */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page {
+    width: 100%;
+}
+
+.page[hidden],
+.project-form[hidden],
+.project-details[hidden] {
+    display: none;
+}
+
+/* Page headings */
+.page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #666;
+    line-height: 1.5;
+}
+
+#add-project-btn {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 1;
+    box-shadow: 3px 3px 0 #333;
+}
+
+/* Project creation form */
+.project-form {
+    margin-bottom: 25px;
+    padding: 22px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #333;
+}
+
+.project-form h3 {
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+.project-form label {
+    display: block;
+    margin: 14px 0 7px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#project-title,
+#project-description {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#project-description {
+    resize: vertical;
+}
+
+.project-form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+#cancel-project-btn {
+    background-color: #eaf6fc;
+}
+
+/* Project cards */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #333;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.project-card.active {
+    background-color: #fce4ee;
+}
+
+.project-card .project-task-count {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Selected project */
+.project-details {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #c8dce6;
+}
+
+.project-details-heading {
+    margin-bottom: 20px;
+}
+
+.project-details-heading h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    overflow-wrap: anywhere;
+}
+
+#selected-project-description {
+    color: #666;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Existing Daily Todo message */
+.today-message {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 18px 22px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #333;
+}
+
+#message-div {
+    flex: 1;
+    min-width: 0;
+}
+
+#now-message {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+#message-input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#message-input[hidden] {
+    display: none;
+}
+
+/* Existing task input area */
+.add-item {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 25px;
+    display: flex;
+    border: 2px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 4px 4px 0 #333;
+}
+
+#items,
+#project-task-input {
+    flex: 1;
+    min-width: 0;
+    padding: 18px 15px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+#add_btn,
+#add-project-task-btn {
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+/* Existing task panels */
+.tasks {
+    width: 100%;
+    max-width: 750px;
+    min-height: 300px;
+    margin: 0 auto 25px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 #333;
+}
+
+#task-list,
+#project-task-list {
+    list-style: none;
+}
+
+/* Task items */
+#task-list li,
+#project-task-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #eaf6fc;
+    border: 1px solid #d2e5ef;
+    border-radius: 8px;
+}
+
+#task-list li span,
+#project-task-list li span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+}
+
+.done {
+    text-decoration: line-through;
+    color: rgb(86, 83, 83);
+}
+
+/* Task completion button */
+.done-btn {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.done-btn:hover {
+    background-color: #b8e3d2;
+    border-color: #398267;
+}
+
+/* Task delete button */
+.delete-btn {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.delete-btn::before {
+    content: "\00D7";
+}
+
+.delete-btn:hover {
+    background-color: #f5b9b9;
+}
+
+/* Existing Trash area */
+.reset {
+    width: 100%;
+    max-width: 750px;
+    margin: 5px auto 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#reset-btn,
+#reset-project-tasks-btn {
+    background-color: #f5b9b9;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0 #333;
+}
+
+#reset-btn:hover,
+#reset-project-tasks-btn:hover {
+    background-color: #ed9999;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    body {
+        padding: 22px 15px;
+    }
+
+    .main-header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 28px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .nav-btn {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .page-heading h2 {
+        font-size: 25px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+    .today-message {
+        padding: 14px;
+    }
+
+    #now-message {
+        font-size: 16px;
+    }
+
+    #items,
+    #project-task-input {
+        padding: 14px 10px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .tasks {
+        min-height: 250px;
+        padding: 15px;
+    }
+
+    #task-list li,
+    #project-task-list li {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .done-btn {
+        width: 22px;
+        height: 22px;
+    }
+
+    .delete-btn {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}

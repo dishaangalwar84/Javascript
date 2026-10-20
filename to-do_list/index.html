@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>TO DO</h1>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <button type="button" id="projects-nav" class="nav-btn active">
+                Projects
+            </button>
+
+            <button type="button" id="daily-nav" class="nav-btn">
+                Daily Todo
+            </button>
+        </nav>
+    </header>
+
+    <!-- PROJECTS PAGE -->
+    <main>
+        <section id="projects-page" class="page active-page">
+            <div class="page-heading">
+                <div>
+                    <h2>My Projects</h2>
+                    <p class="page-subtitle">
+                        Organize your goals, one project at a time.
+                    </p>
+                </div>
+
+                <button type="button" id="add-project-btn"
+                    aria-label="Create a new project">+</button>
+            </div>
+
+            <!-- Project creation form -->
+            <form id="project-form" class="project-form" hidden>
+                <h3>Create a Project</h3>
+
+                <label for="project-title">Project Title</label>
+                <input type="text" id="project-title"
+                    placeholder="Enter project title..." required>
+
+                <label for="project-description">Project Description</label>
+                <textarea id="project-description"
+                    placeholder="Describe your project..."
+                    rows="3"></textarea>
+
+                <div class="project-form-buttons">
+                    <button type="submit" id="create-project-btn">
+                        Create Project
+                    </button>
+
+                    <button type="button" id="cancel-project-btn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+
+            <!-- Project cards will appear here -->
+            <div id="project-list" class="project-list" hidden></div>
+
+            <!-- Selected project details and its tasks -->
+            <section id="project-details" class="project-details" hidden>
+                <div class="project-details-heading">
+                    <div>
+                        <h2 id="selected-project-title"></h2>
+                        <p id="selected-project-description"></p>
+                    </div>
+                </div>
+
+                <div class="add-item">
+                    <input type="text" id="project-task-input"
+                        placeholder="Add a task to this project...">
+                    <button type="button" id="add-project-task-btn">Add</button>
+                </div>
+
+                <div class="tasks">
+                    <ul id="project-task-list"></ul>
+                </div>
+
+                <div class="reset">
+                    <button type="button" id="reset-project-tasks-btn">
+                        Clear Project Tasks
+                    </button>
+                </div>
+            </section>
+        </section>
+
+        <!-- DAILY TODO PAGE: your existing elements and IDs are preserved -->
+        <section id="daily-page" class="page" hidden>
+            <div class="today-message">
+                <div id="message-div">
+                    <p id="now-message" hidden></p>
+                </div>
+
+                <input type="text" id="message-input"
+                    placeholder="Enter today's message...">
+
+                <button type="button" id="now-btn">Change</button>
+            </div>
+
+            <div class="add-item">
+                <input type="text" id="items"
+                    placeholder="Add a to-do item...">
+                <button type="button" id="add_btn">Add</button>
+            </div>
+
+            <div class="tasks">
+                <ul id="task-list"></ul>
+            </div>
+
+            <div class="reset">
+                <button type="button" id="reset-btn">Trash</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="navigation.js"></script>
+    <script src="index.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>

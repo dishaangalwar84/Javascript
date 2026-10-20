@@ -1,0 +1,159 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Library</h1>
+        <p>Manage your books and library members</p>
+    </header>
+
+    <main>
+
+        <!-- BOOK SECTION -->
+        <section class="section">
+
+            <h2>Add a New Book</h2>
+
+            <form id="bookForm">
+
+                <div class="form-group">
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pages">Number of Pages</label>
+                    <input type="number" id="pages" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="publication">Publication</label>
+                    <input type="text" id="publication" required>
+                </div>
+
+                <button type="submit">Add Book</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- BOOK DISPLAY -->
+        <section class="section">
+
+            <h2>Book Information</h2>
+
+            <div class="book-card">
+
+                <h3 id="displayTitle">No book added yet</h3>
+
+                <p>
+                    <strong>Author:</strong>
+                    <span id="displayAuthor">-</span>
+                </p>
+
+                <p>
+                    <strong>Pages:</strong>
+                    <span id="displayPages">-</span>
+                </p>
+
+                <p>
+                    <strong>Publication:</strong>
+                    <span id="displayPublication">-</span>
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    <span id="displayRead">Not Read</span>
+                </p>
+
+                <div class="book-buttons">
+                    <button type="button" id="toggleRead">
+                        Toggle Read
+                    </button>
+
+                    <button type="button" id="removeBook">
+                        Remove Book
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSON SECTION -->
+        <section class="section">
+
+            <h2>Add Library Member</h2>
+
+            <form id="personForm">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date of Issue</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <button type="submit">Add Member</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- PERSON DISPLAY -->
+        <section class="section">
+
+            <h2>Member Information</h2>
+
+            <div class="person-card">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="displayName">-</span>
+                </p>
+
+                <p>
+                    <strong>Age:</strong>
+                    <span id="displayAge">-</span>
+                </p>
+
+                <p>
+                    <strong>Date of Issue:</strong>
+                    <span id="displayDate">-</span>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
+```

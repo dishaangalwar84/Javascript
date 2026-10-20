@@ -1,0 +1,18 @@
+div
+{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(129, 129, 246);
+    border: solid black;
+    color: whitesmoke;
+}
+.dark
+{
+    background-color: black;
+    color: white;
+}
+.light
+{
+    background-color: white;
+    color: black;
+}
